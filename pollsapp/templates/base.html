@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polls App</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel = stylesheet href = "{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'images/vote.png' %}" type="favicon">
+
+
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <h1><a class="navbar-brand" href="{% url 'index' %}">
+          <img src="{% static 'images/vote.png' %}" width="40">
+            &nbsp;Online Poll</a></h1>            
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <form class="d-flex">
+          <a class="btn btn-light" href="#" type="submit">Login</a>
+        </form>
+      </div>
+    </nav>
+</body>
+
+<div class = "container mt-5 pt-5">
+    {% block content %}
+    {% endblock %}    
+</div>
+
+
+
+</html>
